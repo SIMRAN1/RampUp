@@ -13,6 +13,7 @@
 		180F03DA21AFF0AD0002D40F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180F03D821AFF0AD0002D40F /* Main.storyboard */; };
 		180F03DC21AFF0B20002D40F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180F03DB21AFF0B20002D40F /* Assets.xcassets */; };
 		180F03DF21AFF0B20002D40F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180F03DD21AFF0B20002D40F /* LaunchScreen.storyboard */; };
+		186F74DA21B31F8E00E1EC5F /* RampPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F74D921B31F8E00E1EC5F /* RampPickerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		180F03DB21AFF0B20002D40F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		180F03DE21AFF0B20002D40F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		180F03E021AFF0B20002D40F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		186F74D921B31F8E00E1EC5F /* RampPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampPickerVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		180F03D121AFF0AD0002D40F /* rampup */ = {
 			isa = PBXGroup;
 			children = (
+				186F74D821B31F3900E1EC5F /* controller */,
 				180F03D221AFF0AD0002D40F /* AppDelegate.swift */,
 				180F03D421AFF0AD0002D40F /* art.scnassets */,
-				180F03D621AFF0AD0002D40F /* RampPlacerVC.swift */,
 				180F03D821AFF0AD0002D40F /* Main.storyboard */,
 				180F03DB21AFF0B20002D40F /* Assets.xcassets */,
 				180F03DD21AFF0B20002D40F /* LaunchScreen.storyboard */,
 				180F03E021AFF0B20002D40F /* Info.plist */,
 			);
 			path = rampup;
+			sourceTree = "<group>";
+		};
+		186F74D821B31F3900E1EC5F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				180F03D621AFF0AD0002D40F /* RampPlacerVC.swift */,
+				186F74D921B31F8E00E1EC5F /* RampPickerVC.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				180F03D721AFF0AD0002D40F /* RampPlacerVC.swift in Sources */,
+				186F74DA21B31F8E00E1EC5F /* RampPickerVC.swift in Sources */,
 				180F03D321AFF0AD0002D40F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

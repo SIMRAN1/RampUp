@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-class RampPlacerVC: UIViewController, ARSCNViewDelegate {
+class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverControllerDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
@@ -70,6 +70,10 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate {
     
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
+        
+    }
+    
+    @IBAction func RampButtonPressed(_ sender: Any) {
         
     }
 }
