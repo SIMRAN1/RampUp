@@ -4,13 +4,13 @@
   <contributor>
    <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
   </contributor>
-  <created>2018-12-02T04:43:52Z</created>
-  <modified>2018-12-02T04:43:52Z</modified>
+  <created>2018-12-06T20:50:03Z</created>
+  <modified>2018-12-06T20:50:03Z</modified>
   <unit meter="1.000000"/>
   <up_axis>Y_UP</up_axis>
  </asset>
  <library_cameras>
-  <camera id="Camera-camera" name="pipe">
+  <camera id="Camera-camera" name="Camera">
    <optics>
     <technique_common>
      <perspective>
@@ -44,7 +44,7 @@
  </library_lights>
  <library_images>
   <image id="image1">
-   <init_from>textures/skate_pipe.jpg</init_from>
+   <init_from>textures/pipe_ractangle.jpg</init_from>
   </image>
  </library_images>
  <library_materials>
@@ -72,6 +72,9 @@
     </newparam>
     <technique sid="common">
      <constant>
+      <reflective>
+       <color>0.64 0.64 0.64 1</color>
+      </reflective>
       <transparency>
        <float>1</float>
       </transparency>
@@ -143,7 +146,7 @@
  </library_geometries>
  <library_visual_scenes>
   <visual_scene id="scene7">
-   <node id="Camera" name="pipe">
+   <node id="Camera" name="Camera">
     <matrix>0.6858803 -0.3173701 0.6548619 7.481132 -0.01081672 0.8953431 0.4452453 5.343665 -0.7276337 -0.3124685 0.6106655 6.50764 0 0 0 1 </matrix>
     <instance_camera url="#Camera-camera"/>
    </node>
@@ -152,7 +155,7 @@
     <instance_light url="#Lamp-light"/>
    </node>
    <node id="pipe_wire_028028177" name="pipe">
-    <matrix>0.01 0 0 0.5097357 0 0.01 0 0 0 0 0.01 0 0 0 0 1 </matrix>
+    <matrix>0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1 </matrix>
     <instance_geometry url="#geometry2">
      <bind_material>
       <technique_common>
