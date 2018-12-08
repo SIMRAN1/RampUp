@@ -44,6 +44,20 @@ class RampPickerVC: UIViewController {
         scene.rootNode.addChildNode(node)
         preferredContentSize = size
         
+        let objectPyramid  = SCNScene(named: "art.scnassets/pyramid.dae")!
+        let nodep = objectPyramid.rootNode.childNode(withName: "pyramid", recursively: true)!
+        nodep.scale = SCNVector3Make(0.0070, 0.0070, 0.0070)
+        nodep.position = SCNVector3Make(0, 0, -1)
+        scene.rootNode.addChildNode(nodep)
+        preferredContentSize = size
+        
+        let objectq  = SCNScene(named: "art.scnassets/quarter.dae")!
+        let nodeq = objectq.rootNode.childNode(withName: "quarter", recursively: true)!
+        nodeq.scale = SCNVector3Make(0.0060, 0.0060, 0.0060)
+        nodeq.position = SCNVector3Make(0, -1, -1)
+        scene.rootNode.addChildNode(nodeq)
+        preferredContentSize = size
+        
         // Do any additional setup after loading the view.
     }
     

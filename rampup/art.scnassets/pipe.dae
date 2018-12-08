@@ -4,8 +4,8 @@
   <contributor>
    <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
   </contributor>
-  <created>2018-12-06T20:50:03Z</created>
-  <modified>2018-12-06T20:50:03Z</modified>
+  <created>2018-12-08T06:20:08Z</created>
+  <modified>2018-12-08T06:20:08Z</modified>
   <unit meter="1.000000"/>
   <up_axis>Y_UP</up_axis>
  </asset>
@@ -73,7 +73,7 @@
     <technique sid="common">
      <constant>
       <reflective>
-       <color>0.64 0.64 0.64 1</color>
+       <color>0 0 0 1</color>
       </reflective>
       <transparency>
        <float>1</float>
