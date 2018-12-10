@@ -63,6 +63,7 @@ class RampPickerVC: UIViewController {
             let node = hitResults[0].node
             print(node.name!)
               rampPlacerVC.onRampSelected(node.name!)
+            dismiss(animated: true, completion: nil)
             
             
         }
