@@ -43,6 +43,16 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
         
         // Set the scene to the view
         sceneView.scene = scene
+        let gesture1 = UILongPressGestureRecognizer(target: self, action: #selector(onLongPress(_:)))
+        let gesture2 = UILongPressGestureRecognizer(target: self, action: #selector(onLongPress(_:)))
+        let gesture3 = UILongPressGestureRecognizer(target: self, action: #selector(onLongPress(_:)))
+        gesture1.minimumPressDuration = 0.1
+        gesture2.minimumPressDuration = 0.1
+        gesture3.minimumPressDuration = 0.1
+        rotateButton.addGestureRecognizer(gesture1)
+        upArrowButton.addGestureRecognizer(gesture2)
+        downArrowButton.addGestureRecognizer(gesture3)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -136,5 +146,18 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
             ramp.removeFromParentNode()
             selectedRamp = nil
         }
+    }
+    
+    @objc func onLongPress(_ gesture: UILongPressGestureRecognizer) {
+        if let ramp = selectedRamp {
+            if gesture.state == .ended {
+                ramp.removeAllActions()
+            } else if gesture.state == .began {
+                if gesture.view === rotateButton {
+                    
+                }
+            }
+        }
+        
     }
 }
