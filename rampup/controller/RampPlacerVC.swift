@@ -154,7 +154,14 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
                 ramp.removeAllActions()
             } else if gesture.state == .began {
                 if gesture.view === rotateButton {
-                    
+                    let rotate = SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: CGFloat(0.08 * Double.pi), z: 0, duration: 0.1))
+                    ramp.runAction(rotate)
+                } else if gesture.view === upArrowButton {
+                    let move = SCNAction.repeatForever(SCNAction.moveBy(x: 0, y: 0.08, z: 0, duration: 0.1))
+                    ramp.runAction(move)
+                } else if gesture.view === downArrowButton {
+                    let move = SCNAction.repeatForever(SCNAction.moveBy(x: 0, y: -0.08, z: 0, duration: 0.1))
+                    ramp.runAction(move)
                 }
             }
         }
