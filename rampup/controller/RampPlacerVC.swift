@@ -13,6 +13,7 @@ import ARKit
 class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+    var selectedRamp: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +69,17 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
         
     }
     
+    override  func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else {
+            return
+        }
+        let results = sceneView.hitTest(touch.location(in: sceneView), types: .featurePoint)
+        guard let hitFeature = results.last else {
+            return
+        }
+        
+    }
+    
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
@@ -88,6 +100,7 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
     }
     
     func onRampSelected(_ rampName: String) {
+        selectedRamp = rampName
         
     }
 }
