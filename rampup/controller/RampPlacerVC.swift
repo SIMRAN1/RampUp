@@ -131,5 +131,10 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
     }
     
     @IBAction func onRemovedPressed(_ sender: Any) {
+        
+        if let ramp = selectedRamp {
+            ramp.removeFromParentNode()
+            selectedRamp = nil
+        }
     }
 }
