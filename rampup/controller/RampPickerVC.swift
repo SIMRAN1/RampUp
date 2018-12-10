@@ -42,6 +42,8 @@ class RampPickerVC: UIViewController {
         Ramp.startRotation(node: node)
         scene.rootNode.addChildNode(node)
         preferredContentSize = size
+        view.layer.borderColor = UIColor.white.cgColor
+        view.layer.borderWidth = 3.0
         
         let nodep = Ramp.getPyramid()
         Ramp.startRotation(node: nodep)
