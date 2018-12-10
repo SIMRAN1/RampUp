@@ -10,6 +10,21 @@ import Foundation
 import SceneKit
 
 class Ramp {
+    
+    class func getRampForName(rampName: String) -> SCNNode{
+        switch rampName {
+        case "pipe":
+            return Ramp.getpipe()
+        case "pyramid":
+            return Ramp.getPyramid()
+        case "quarter":
+            return Ramp.getQuarter()
+        default:
+            return Ramp.getpipe()
+        }
+        
+    }
+    
     class func getpipe() -> SCNNode {
         let obj  = SCNScene(named: "art.scnassets/pipe.dae")!
         let node = obj.rootNode.childNode(withName: "pipe", recursively: true)!
